@@ -12,7 +12,7 @@ class HomeUi extends StatefulWidget {
 
 class _HomeUiState extends State<HomeUi> {
   //setค่าเพื่อใช้กำหนดรูปแบบตัวเลขแบบมี , กับ .
-  var nf = NumberFormat('###,##0.00', "eu_US");
+  var nf = NumberFormat('#,##0.00');
   TextEditingController _carPriceCtrl = TextEditingController(text: '');
   TextEditingController _interestCtrl = TextEditingController(text: '');
   String? _downpay = '10';
@@ -427,15 +427,11 @@ class _HomeUiState extends State<HomeUi> {
                     //คำนวนเงินที่จะต้องนำไปผ่อน = ยอดจัด + ดอกเบี่ยตามจำนวนปีที่ผ่อน
                     double carPriceTotal = totalCarPrice + moneyInterestTotal;
                     //คำนวนเงินที่จะผ่อนต่อเดือน = เงินที่ต้องไปคิดยอดผ่อน /(จำนวนปีที่ผ่อน)*12)
-                    double carMoneyPayPerMonth = totalCarPrice / (yearPay * 12);
+                    double carMoneyPayPerMonth = carPriceTotal / (yearPay * 12);
                     //แสดงผลราคารถ เงินดาวน์ จำนวนเดือน และเงินที่ผ่อน
-                    String msgShow = 'รถราคา ${nf.format(
-                      carPrice,
-                    )}บาท\nดาวน์ ${(downPay,)}% เป็นเงิน ${nf.format(
-                      moneyDownPay,
-                    )}บาท\nจำนวนเดือนผ่อน ${yearPay * 12}เดือน\nค่าผ่อนต่อเดือน ${nf.format(
-                      carMoneyPayPerMonth,
-                    )} บาท';
+                    String msgShow =
+                        'รถราคา ${nf.format(carPrice)}บาท\nดาวน์ ${downPay}% เป็นเงิน ${nf.format(moneyDownPay //, คืออะไร มาจากไหน555555
+                            )}บาท\nจำนวนเดือนผ่อน ${yearPay * 12}เดือน\nค่าผ่อนต่อเดือน ${nf.format(carMoneyPayPerMonth)} บาท';
                     _showResultDialog(context, msgShow);
                   }
                 },
