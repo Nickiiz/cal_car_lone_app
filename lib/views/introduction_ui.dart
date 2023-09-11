@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:math';
-
 import 'package:cal_car_loan_app/views/home_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,6 +34,7 @@ class _IntroductionUIState extends State<IntroductionUI> {
               style: GoogleFonts.kanit(
                 fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
+              textAlign: TextAlign.center,
             ),
             image: Align(
               alignment: Alignment.bottomCenter,
@@ -61,6 +60,7 @@ class _IntroductionUIState extends State<IntroductionUI> {
               style: GoogleFonts.kanit(
                 fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
+              textAlign: TextAlign.center,
             ),
             image: Align(
               alignment: Alignment.bottomCenter,
@@ -86,6 +86,7 @@ class _IntroductionUIState extends State<IntroductionUI> {
               style: GoogleFonts.kanit(
                 fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
+              textAlign: TextAlign.center,
             ),
             image: Align(
               alignment: Alignment.bottomCenter,
@@ -105,6 +106,7 @@ class _IntroductionUIState extends State<IntroductionUI> {
                 fontSize: MediaQuery.of(context).size.width * 0.06,
                 fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.center,
             ),
             bodyWidget: Text(
               'View the latest Fronx images. Fronx car has 139 images of its interior and exterior. Also, Maruti Suzuki Fronx is available in 9 different colours.',
@@ -136,6 +138,7 @@ class _IntroductionUIState extends State<IntroductionUI> {
               style: GoogleFonts.kanit(
                 fontSize: MediaQuery.of(context).size.width * 0.04,
               ),
+              textAlign: TextAlign.center,
             ),
             image: Align(
               alignment: Alignment.bottomCenter,
